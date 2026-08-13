@@ -59,7 +59,6 @@
     padding:0 32px;
   }
 
-  /* background starfield / constellation canvas */
   #stars{
     position:fixed; inset:0; width:100%; height:100%;
     z-index:0; pointer-events:none;
@@ -69,7 +68,24 @@
     z-index:2; pointer-events:none;
   }
 
-  /* ===== Nav ===== */
+  #scroll-progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-soft), var(--cyan));
+    z-index: 9999;
+    transition: width 0.08s linear;
+    border-radius: 0 2px 2px 0;
+  }
+  #spark-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 60px;
+    pointer-events: none;
+    z-index: 9998;
+  }
+
   header{
     position:fixed; top:0; left:0; right:0; z-index:50;
     background:rgba(10,15,29,0.72);
@@ -263,11 +279,9 @@
   }
   .strip-item .sep{ color:var(--gold); }
 
-  /* ===== Generic section spacing ===== */
   .section{ padding:130px 0; }
   .section.tight{ padding:100px 0; }
 
-  /* ===== About ===== */
   .about-grid{
     display:grid; grid-template-columns: 0.85fr 1.15fr; gap:70px; margin-top:60px;
     align-items:start;
@@ -430,7 +444,6 @@
     .project-media{ min-height:200px; }
   }
 
-  /* ===== Roadmaps (accordion) ===== */
   .roadmap-list{ margin-top:60px; border-top:1px solid var(--line); }
   .rm-item{ border-bottom:1px solid var(--line); }
   .rm-head{
@@ -465,7 +478,6 @@
   .rm-body-inner li{ position:relative; padding-left:20px; margin-bottom:8px; }
   .rm-body-inner li::before{ content:'—'; position:absolute; left:0; color:var(--gold); }
 
-  /* ===== Philosophy ===== */
   .philosophy{
     background:var(--bg-panel);
     border-top:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -482,7 +494,6 @@
     letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint);
   }
 
-  /* ===== Contact ===== */
   .contact-grid{
     display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:60px; align-items:end;
   }
@@ -520,6 +531,8 @@
 </head>
 <body>
 
+<div id="scroll-progress-bar"></div>
+<canvas id="spark-canvas"></canvas>
 <canvas id="stars"></canvas>
 <canvas id="cursorTrail"></canvas>
 
@@ -540,7 +553,7 @@
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
+
 <section class="hero">
   <div class="wrap">
     <div>
@@ -554,7 +567,7 @@
       <p class="hero-desc">Ahmed Farid Zahidi (or The AFZ, and also knows as Daze) — A BS-MS Dual Degree student building across theoretical physics, applied mathematics, and data science, with a longer bet on becoming a genuinely multidisciplinary scientist and dedicates his first thesis to 'Her'.</p>
       <div class="hero-actions">
         <a href="#roadmaps" class="btn btn-primary">See the Roadmap</a>
-        <a href="Ahmed_Farid_Zahidi_Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+        <a href="AHMED_FARID_ZAHIDI.pdf" class="btn btn-ghost" download>Download Resume</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
       <div class="hero-meta">
@@ -603,7 +616,7 @@
         </g>
         <g id="orbitGroupC" class="orbit-node">
           <circle class="dot" cx="70" cy="255" r="4" fill="#7FD8CE"/>
-          <text x="-6" y="278" text-anchor="start">Physics</text>
+          <text x="70" y="278" text-anchor="start">Physics</text>
         </g>
         <g id="orbitGroupD" class="orbit-node">
           <circle class="dot" cx="365" cy="330" r="4" fill="#7FD8CE"/>
@@ -612,6 +625,14 @@
         <g id="orbitGroupE" class="orbit-node">
           <circle class="dot" cx="60" cy="90" r="4" fill="#7FD8CE"/>
           <text x="20" y="76">Data Science</text>
+        </g>
+        <g id="orbitGroupF" class="orbit-node">
+          <circle class="dot" cx="210" cy="400" r="4" fill="#7FD8CE"/>
+          <text x="210" y="416" text-anchor="middle">Marvel</text>
+        </g>
+        <g id="orbitGroupG" class="orbit-node">
+          <circle class="dot" cx="380" cy="130" r="4" fill="#7FD8CE"/>
+          <text x="380" y="118" text-anchor="middle">Coding</text>
         </g>
       </svg>
     </div>
@@ -624,7 +645,7 @@
   </div>
 </div>
 
-<!-- ============ ABOUT ============ -->
+
 <section class="section" id="about">
   <div class="wrap">
     <div class="eyebrow">The Orbit</div>
@@ -653,7 +674,7 @@
   </div>
 </section>
 
-<!-- ============ JOURNEY ============ -->
+
 <section class="section tight" id="journey">
   <div class="wrap">
     <div class="eyebrow">The Long Way Round</div>
@@ -707,7 +728,7 @@
   </div>
 </section>
 
-<!-- ============ UNIVERSE / INTERESTS ============ -->
+
 <section class="section" id="universe">
   <div class="wrap">
     <div class="eyebrow">The Universe</div>
@@ -725,7 +746,7 @@
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
+
 <section class="section tight" id="skills">
   <div class="wrap">
     <div class="eyebrow">The Craft</div>
@@ -752,7 +773,7 @@
   </div>
 </section>
 
-<!-- ============ WORK / PROJECTS ============ -->
+
 <section class="section tight" id="work">
   <div class="wrap">
     <div class="eyebrow">Selected Work</div>
@@ -791,7 +812,7 @@
   </div>
 </section>
 
-<!-- ============ ROADMAPS ============ -->
+
 <section class="section" id="roadmaps">
   <div class="wrap">
     <div class="eyebrow">Where This Is Headed</div>
@@ -876,7 +897,7 @@
   </div>
 </section>
 
-<!-- ============ PHILOSOPHY ============ -->
+
 <section class="philosophy">
   <div class="wrap">
     <div class="eyebrow" style="justify-content:center;">A Note on the Harder Years</div>
@@ -895,11 +916,11 @@
         <p class="contact-note reveal" style="margin-top:24px;">Whether it's research collaboration, a project, or just a conversation about wormholes — I'm open to everything.</p>
       </div>
       <div class="contact-links reveal">
-        <a href="mailto:ta8564280@gmail.com"><span>Email</span><span class="arrow">→</span></a>
+        <a href="mailto:afzdoingphysics@gmail.com"><span>Email</span><span class="arrow">→</span></a>
         <a href="https://linkedin.com/in/ahmedfaridzahidi" target="_blank" rel="noopener"><span>LinkedIn</span><span class="arrow">→</span></a>
         <a href="https://github.com/theafz" target="_blank" rel="noopener"><span>GitHub</span><span class="arrow">→</span></a>
-        <a href="https://www.instagram.com/dazeatiiser/" target="_blank" rel="noopener"><span>Instagram</span><span class="arrow">→</span></a>
-        <a href="Ahmed_Farid_Zahidi_Resume.pdf" download><span>Resume (PDF)</span><span class="arrow">↓</span></a>
+        <a href="https://www.instagram.com/shootingwebsaftersex/" target="_blank" rel="noopener"><span>Instagram</span><span class="arrow">→</span></a>
+        <a href="AHMED_FARID_ZAHIDI.pdf" download><span>Resume (PDF)</span><span class="arrow">↓</span></a>
       </div>
     </div>
   </div>
