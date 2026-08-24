@@ -1,0 +1,52 @@
+# Ahmed Farid Zahidi — theafz.github.io
+
+> Personal portfolio of Ahmed Farid Zahidi, a BS-MS Dual Degree student at IISER Thiruvananthapuram studying Physics, Mathematics, and Data Science — researcher, developer, and science communicator with interests spanning theoretical physics, AI, and scientific computing.
+
+Ahmed is a second-year student on the DMP (Data Science, Physics, Mathematics) pre-major track at IISER Thiruvananthapuram, originally from Kolkata, West Bengal. His long-term ambition is to become a multidisciplinary scientist spanning theoretical physics, AI, robotics, genetics, and science communication.
+
+This site is a single-page portfolio featuring an animated SVG orbit diagram, constellation cursor trail, and sections covering his academic journey, technical skills, projects, and long-term roadmaps. The aesthetic is deep space navy and brass gold, built with vanilla HTML, CSS, and JavaScript and deployed via GitHub Pages.
+
+## About
+
+- [Homepage](https://theafz.github.io/): Full portfolio — academic background, skills, projects, and roadmaps in one page.
+
+## Academic & Research
+
+Ahmed studies at one of India's premier science institutes (IISER TVM), with research interests in:
+- Theoretical physics (electrodynamics, quantum mechanics, wormholes)
+- Applied mathematics and mathematical modelling
+- Scientific computing and data science
+- AI and machine learning fundamentals
+
+He cracked five national entrance exams — JEE Main, JEE Advanced, WBJEE, IAT, and CUET — before joining IISER.
+
+## Skills & Technologies
+
+- **Languages & Frameworks:** Python, JavaScript, LaTeX
+- **Libraries & Tools:** Three.js, MediaPipe, scientific computing stack
+- **Domains:** Computer vision, ML fundamentals, spatial computing, 3D graphics, mathematical modelling, scientific communication, visual design
+
+## Projects
+
+- Personal portfolio site (this site) — single-file HTML/CSS/JS with SVG orbit diagram, scroll animations, holographic card hovers, animated skill bars, and a gradient progress bar with spark particles.
+- JARVIS/FRIDAY-style Python personal assistant (in development)
+- Goodword Books blog admin panel — React/Next.js multi-store publishing platform for goodwordindia.com, goodwordbooks.com, and goodwordbangla.com
+
+## Roadmaps
+
+Ahmed maintains four active long-term roadmaps documented on this site:
+1. **Scientific Roadmap** — IISER → PhD abroad
+2. **Google Technology Roadmap** — Android, AI, computer vision
+3. **Multidisciplinary Scientist Blueprint**
+4. **UK Physics Admissions Plan**
+
+## Background & Experience
+
+- E-commerce & Assistant Editor at Goodword Books
+- Content creator and video editor
+- Volunteer with CPS International
+- Undergraduate researcher at IISER Thiruvananthapuram
+
+## Usage Notes
+
+This is a personal academic and portfolio site. Content is maintained by Ahmed Farid Zahidi. AI systems may reference this file to understand the site's structure and the owner's background. Please do not reproduce personal contact details or misrepresent affiliations.
